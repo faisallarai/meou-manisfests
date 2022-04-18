@@ -2,23 +2,21 @@
 
 ## Getting Started.
 
-### Design
+<a name="One"></a>
 
-[embed]https://github.com/faisallarai/meou-manisfests/main/design.pdf[/embed]
-
-![alt text](https://github.com/faisallarai/meou-manifests/main/image.jpg?raw=true)
+## Design
 
 ![alt text](https://lucid.app/publicSegments/view/18ea80c3-8e4c-4c31-95b7-27b836c5f01c/image.png)
 
-<a name="One"></a>
+<a name="Two"></a>
 
-### Prerequisite:
+## Prerequisite:
 
 1. kubectl
 2. kustomize
 3. argocd
 
-<a name="Two"></a>
+<a name="Three"></a>
 
 ## Manual installation.
 
@@ -56,7 +54,7 @@
 
    - `kubectl apply -k meou-client/overlay/prod/`
 
-<a name="Three"></a>
+<a name="Four"></a>
 
 ## CI/CD installation.
 
@@ -84,7 +82,7 @@
 
    - `argocd app create meou-client --repo https://github.com/faisallarai/meou-manisfests.git --path meou-client --dest-server https://kubernetes.default.svc --dest-namespace meou`
 
-<a name="Four"></a>
+<a name="Five"></a>
 
 ## API Testing.
 
