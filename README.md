@@ -4,7 +4,9 @@
 
 ### Design
 
-[embed]./design.pdf[/embed]
+[embed]https://github.com/faisallarai/meou-manisfests/main/design.pdf[/embed]
+
+![alt text](https://github.com/faisallarai/meou-manifests/blob/main/image.jpg?raw=true)
 
 <a name="One"></a>
 
