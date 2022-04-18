@@ -2,6 +2,10 @@
 
 ## Getting Started.
 
+### Design
+
+[embed]design.pdf[/embed]
+
 <a name="One"></a>
 
 ### Prerequisite:
