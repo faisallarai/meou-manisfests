@@ -48,13 +48,61 @@
 
    - `kubectl apply -k meou-client/overlay/prod/`
 
+<a name="Three"></a>
+
 ## CI/CD installation.
+
+### MongoDB:
+
+1. Run the command to create application.
+
+   - `argocd app create mongodb --repo https://github.com/faisallarai/meou-manisfests.git --path mongodb --dest-server https://kubernetes.default.svc --dest-namespace meou`
+
+### Redis:
+
+1. Run the command to create application.
+
+   - `argocd app create redis --repo https://github.com/faisallarai/meou-manisfests.git --path redis --dest-server https://kubernetes.default.svc --dest-namespace meou`
 
 ### NodeJS API:
 
-1. Run the command.
+1. Run the command to create application.
 
-   - `argocd app create meou-api --repo https://github.com/faisallarai/meou-manifests.git --path meou-api --dest-server https://kubernetes.default.svc --dest-namespace meou`
+   - `argocd app create meou-api --repo https://github.com/faisallarai/meou-manisfests.git --path meou-api --dest-server https://kubernetes.default.svc --dest-namespace meou`
+
+### ReactJS API:
+
+1. Run the command to create application.
+
+   - `argocd app create meou-client --repo https://github.com/faisallarai/meou-manisfests.git --path meou-client --dest-server https://kubernetes.default.svc --dest-namespace meou`
+
+<a name="Four"></a>
+
+## API Testing.
+
+1. Run the command to have access to the api locally.
+
+   - `kubectl port-forward svc/meou-api-service -n meou 8080:80`
+
+### POST Request:
+
+```
+POST `http://localhost:8080/api/v1/cats`
+
+Body
+{
+"imageId":1
+}
+```
+
+### GET Request:
+
+```
+GET `http://localhost:8080/api/v1/cats/:ID`
+
+```
+
+-
 
 ## Improvement
 
