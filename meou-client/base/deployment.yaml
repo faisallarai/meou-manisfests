@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meou-react
+  namespace: meuo
+  labels:
+    app: meou-react
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: meou-react
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: meou-react
+        tier: frontend
+    spec:
+      containers:
+        - name: meou-react
+          image: faisallarai/meou-client:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+          env:
+            - name: REACT_APP_SERVER_URL
+              value: http://meou-api-service
+          resources:
+            limits:
+              memory: '128Mi'
+              cpu: '200m'
+          livenessProbe:
+            httpGet:
+              path: /index.html
+              port: 80
+            initialDelaySeconds: 15
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 1
+          readinessProbe:
+            httpGet:
+              path: /index.html
+              port: 80
+            initialDelaySeconds: 15
+            periodSeconds: 5
+            failureThreshold: 1

@@ -1,0 +1,21 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+bases:
+  - ../../base
+
+images:
+  - name: faisallarai/meou-api
+    newName: faisallarai/meou-api
+    newTag: 1.0.5
+
+secretGenerator:
+  - literals:
+      - redis-password=password123234
+    name: meou-api
+    type: Opaque
+
+patchesStrategicMerge:
+  - redis-secret.yaml
+  - custom-env.yaml
+  - rollout-strategy.yaml

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meou-api
+  namespace: meuo
+spec:
+  template:
+    spec:
+      containers:
+        - name: app
+          env:
+            - name: MONGODB_URI
+              value: mongodb://mongo:27017/cats_db?w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&directConnection=true&ssl=false
+            - name: REDIS_HOST
+              value: redis-service
+            - name: REDIS_PORT
+              value: '6379'
+            - name: PORT
+              value: '3000'
