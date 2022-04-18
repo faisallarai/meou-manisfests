@@ -6,7 +6,9 @@
 
 [embed]https://github.com/faisallarai/meou-manisfests/main/design.pdf[/embed]
 
-![alt text](https://github.com/faisallarai/meou-manifests/blob/main/image.jpg?raw=true)
+![alt text](https://github.com/faisallarai/meou-manifests/main/image.jpg?raw=true)
+
+![alt text](https://lucid.app/publicSegments/view/18ea80c3-8e4c-4c31-95b7-27b836c5f01c/image.png)
 
 <a name="One"></a>
 
