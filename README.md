@@ -4,7 +4,7 @@
 
 ### Design
 
-[embed]design.pdf[/embed]
+[embed]./design.pdf[/embed]
 
 <a name="One"></a>
 
