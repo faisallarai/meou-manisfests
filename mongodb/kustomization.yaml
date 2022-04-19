@@ -3,7 +3,7 @@ kind: Kustomization
 
 resources:
   - rbac.yaml
-  - persistentVolume.yaml
+  # - persistentVolume.yaml
   - persistentVolumeClaim.yaml
   - statefulSet.yaml
   - service.yaml

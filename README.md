@@ -24,11 +24,9 @@
 
 1. Run the command.
 
-   - `kubectl apply -k argocd/`
-   - `kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'`
-   - `` export ARGOCD_SERVER=`kubectl get svc argocd-server -n argocd -o json | jq --raw-output '.status.loadBalancer.ingress[0].hostname'` ``
-   - `` export ARGO_PWD=`kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d` ``
-   - `argocd login $ARGOCD_SERVER --username admin --password $ARGO_PWD --insecure`
+   - `cd meou-manifests`
+   - `chmod +x argocd.sh`
+   - `./argocd.sh`
 
 ### MongoDB:
 
@@ -58,29 +56,11 @@
 
 ## CI/CD installation.
 
-### MongoDB:
+1. Run the command to create application on ArgoCD.
 
-1. Run the command to create application.
-
-   - `argocd app create mongodb --repo https://github.com/faisallarai/meou-manisfests.git --path mongodb --dest-server https://kubernetes.default.svc --dest-namespace meou`
-
-### Redis:
-
-1. Run the command to create application.
-
-   - `argocd app create redis --repo https://github.com/faisallarai/meou-manisfests.git --path redis --dest-server https://kubernetes.default.svc --dest-namespace meou`
-
-### NodeJS API:
-
-1. Run the command to create application.
-
-   - `argocd app create meou-api --repo https://github.com/faisallarai/meou-manisfests.git --path meou-api --dest-server https://kubernetes.default.svc --dest-namespace meou`
-
-### ReactJS API:
-
-1. Run the command to create application.
-
-   - `argocd app create meou-client --repo https://github.com/faisallarai/meou-manisfests.git --path meou-client --dest-server https://kubernetes.default.svc --dest-namespace meou`
+   - `cd meou-manifests`
+   - `chmod +x argocdapps.sh`
+   - `./argocdapps.sh`
 
 <a name="Five"></a>
 
