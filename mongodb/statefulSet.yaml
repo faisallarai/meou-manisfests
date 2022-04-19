@@ -42,15 +42,7 @@ spec:
           env:
             - name: MONGO_SIDECAR_POD_LABELS
               value: 'role=mongo,environment=test'
-  volumeClaimTemplates:
-    - metadata:
-        name: storage
-        namespace: meou
-      spec:
-        accessModes:
-          - ReadWriteOnce
-        volumeMode: Filesystem
-        storageClassName: ''
-        resources:
-          requests:
-            storage: 10Gi
+      volumes:
+        - name: storage
+          persistentVolumeClaim:
+            claimName: efs-claim-mongodb

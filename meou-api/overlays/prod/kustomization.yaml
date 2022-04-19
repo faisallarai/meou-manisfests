@@ -12,7 +12,7 @@ images:
 secretGenerator:
   - literals:
       - redis-password=password123234
-    name: meou-api
+    name: meou-api-852996kt9d
     type: Opaque
 
 patchesStrategicMerge:
