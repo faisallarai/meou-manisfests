@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: faisallarai/meou-api:latest
+          image: faisallarai/meou-api
           ports:
             - containerPort: 3000
           imagePullPolicy: Always

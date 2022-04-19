@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: meou-react
-          image: faisallarai/meou-client:latest
+          image: faisallarai/meou-client
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
