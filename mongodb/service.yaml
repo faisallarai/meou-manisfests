@@ -4,7 +4,7 @@ metadata:
   name: mongo
   labels:
     name: mongo
-  namespace: meuo
+  namespace: meou
 spec:
   ports:
     - port: 27017

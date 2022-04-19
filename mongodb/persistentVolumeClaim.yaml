@@ -3,7 +3,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: efs-claim-mongodb
-  namespace: meuo
+  namespace: meou
 spec:
   accessModes:
     - ReadWriteMany

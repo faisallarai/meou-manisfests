@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: redis-config
-  namespace: meuo
+  namespace: meou
 data:
   redis.conf: |
     # Redis configuration file example.

@@ -7,4 +7,4 @@ bases:
 images:
   - name: faisallarai/meou-client
     newName: faisallarai/meou-client
-    newTag: 1.0.5
+    newTag: main

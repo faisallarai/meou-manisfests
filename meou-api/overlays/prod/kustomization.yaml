@@ -7,7 +7,7 @@ bases:
 images:
   - name: faisallarai/meou-api
     newName: faisallarai/meou-api
-    newTag: 1.0.5
+    newTag: main
 
 secretGenerator:
   - literals:

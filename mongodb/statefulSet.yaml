@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mongo-replica
-  namespace: meuo
+  namespace: meou
 spec:
   serviceName: 'mongo'
   replicas: 1
@@ -45,7 +45,7 @@ spec:
   volumeClaimTemplates:
     - metadata:
         name: storage
-        namespace: meuo
+        namespace: meou
       spec:
         accessModes:
           - ReadWriteOnce

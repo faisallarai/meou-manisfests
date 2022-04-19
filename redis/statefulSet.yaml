@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: app-redis
-  namespace: meuo
+  namespace: meou
 spec:
   serviceName: redis-service
   replicas: 3

@@ -4,7 +4,7 @@ metadata:
   labels:
     app: app-redis
   name: redis-service
-  namespace: meuo
+  namespace: meou
 spec:
   clusterIP: None
   ports:
