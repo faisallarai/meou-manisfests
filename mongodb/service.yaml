@@ -4,7 +4,7 @@ metadata:
   name: mongo
   labels:
     name: mongo
-  namespace: meou
+  namespace: kube-system
 spec:
   ports:
     - port: 27017

@@ -2,10 +2,10 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mongo-replica
-  namespace: meou
+  namespace: kube-system
 spec:
   serviceName: 'mongo'
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: mongo
@@ -41,7 +41,14 @@ spec:
           env:
             - name: MONGO_SIDECAR_POD_LABELS
               value: 'role=mongo,environment=test'
-      volumes:
-        - name: storage
-          persistentVolumeClaim:
-            claimName: efs-claim-mongodb
+  volumeClaimTemplates:
+    - metadata:
+        name: storage
+        namespace: kube-system
+        annotations:
+          volume.alpha.kubernetes.io/storage-class: default
+      spec:
+        accessModes: ['ReadWriteOnce']
+        resources:
+          requests:
+            storage: 10Gi
