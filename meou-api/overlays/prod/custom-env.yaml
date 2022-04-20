@@ -12,7 +12,7 @@ spec:
             - name: MONGODB_URI
               value: mongodb://mongo.kube-system:27017/cats_db?w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&directConnection=true&ssl=false
             - name: REDIS_HOST
-              value: redis-service.meou
+              value: redis.meou
             - name: REDIS_PORT
               value: '6379'
             - name: PORT
