@@ -20,8 +20,7 @@ spec:
       terminationGracePeriodSeconds: 10
       containers:
         - name: mongodb
-          image: mongo:4.2
-          env:
+          image: mongo
           command: ['/bin/sh']
           args: ['-c', 'mongod --replSet=rs0 --bind_ip_all']
           resources:

@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meou-react
+  namespace: meou
+spec:
+  template:
+    spec:
+      containers:
+        - name: meou-react
+          env:
+            - name: REACT_APP_SERVER_URL
+              value: http://meou-api-service

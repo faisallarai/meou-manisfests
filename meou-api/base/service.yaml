@@ -7,9 +7,9 @@ metadata:
     app: meou-api
     tier: api
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
-    - port: 80
+    - port: 8080
       targetPort: 3000
   selector:
     app: meou-api

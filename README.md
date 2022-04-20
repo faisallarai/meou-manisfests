@@ -88,8 +88,6 @@ GET `http://localhost:8080/api/v1/cats/:ID`
 
 ```
 
--
-
 ## Improvement
 
 ### Saving secret in vault or using sealed secret

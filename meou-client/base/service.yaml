@@ -6,6 +6,8 @@ metadata:
   labels:
     app: meou-react
     tier: frontend
+  annotations:
+    alb.ingress.kubernetes.io/target-type: ip
 spec:
   type: LoadBalancer
   ports:

@@ -8,3 +8,7 @@ images:
   - name: faisallarai/meou-client
     newName: faisallarai/meou-client
     newTag: main
+
+patchesStrategicMerge:
+  - custom-env.yaml
+  - rollout-strategy.yaml

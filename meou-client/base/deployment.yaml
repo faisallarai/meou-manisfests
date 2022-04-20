@@ -20,12 +20,13 @@ spec:
       containers:
         - name: meou-react
           image: faisallarai/meou-client
-          imagePullPolicy: IfNotPresent
+          command: ['/bin/sh', '-c', 'env']
+          envFrom:
+            - configMapRef:
+                name: react-config
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
-          env:
-            - name: REACT_APP_SERVER_URL
-              value: http://meou-api-service
           resources:
             limits:
               memory: '128Mi'

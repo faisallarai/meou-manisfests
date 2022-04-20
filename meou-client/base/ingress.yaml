@@ -1,16 +1,28 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: frontend
+  name: meou-client-ingress
   namespace: meou
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    kubernetes.io/ingress.class: alb
+  labels:
+    app: nginx-ingress
 spec:
   rules:
     - http:
         paths:
-          - path: /*
+          - path: /
             pathType: Prefix
             backend:
               service:
                 name: meou-react-service
                 port:
                   number: 80
+          - path: /*
+            pathType: Prefix
+            backend:
+              service:
+                name: meou-api-service
+                port:
+                  number: 8080
