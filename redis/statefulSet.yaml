@@ -16,8 +16,8 @@ spec:
     spec:
       initContainers:
         - name: config
-          image: redis:6.2.3-alpine
-          command: ['sh', '-c', 'redis-check-aof --fix  /data/appendonly.aof']
+          image: redis:6.2.6-alpine
+          command: ['sh', '-c']
           args:
             - |
               cp /tmp/redis/redis.conf /etc/redis/redis.conf
