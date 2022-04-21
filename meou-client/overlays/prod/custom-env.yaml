@@ -10,4 +10,4 @@ spec:
         - name: app
           env:
             - name: REACT_APP_SERVER_URL
-              value: http://meou-api-service
+              value: http://172.20.243.230:30036

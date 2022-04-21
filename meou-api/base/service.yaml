@@ -7,11 +7,12 @@ metadata:
     app: meou-api
     tier: api
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
     - port: 8080
-      protocol: TCP
       targetPort: 3000
+      nodePort: 30036
+      name: http
   selector:
     app: meou-api
     tier: api
