@@ -20,7 +20,7 @@ spec:
       containers:
         - name: app
           image: faisallarai/meou-client
-          command: ['/bin/sh', '-c', 'env']
+          # command: ['/bin/sh', '-c', 'env']
           imagePullPolicy: Always
           ports:
             - containerPort: 80
