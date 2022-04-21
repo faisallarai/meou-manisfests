@@ -7,7 +7,7 @@ spec:
   template:
     spec:
       containers:
-        - name: meou-react
+        - name: app
           env:
             - name: REACT_APP_SERVER_URL
               value: http://meou-api-service
