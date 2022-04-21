@@ -10,4 +10,4 @@ spec:
         - name: app
           env:
             - name: REACT_APP_SERVER_URL
-              value: http://172.20.243.230:30036
+              value: http://k8s-meou-meouclie-9eb11a035a-2040207942.us-east-2.elb.amazonaws.com
